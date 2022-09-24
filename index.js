@@ -15,7 +15,7 @@ const setWeatherData = data => {
         humidity: data.main.humidity,
         pressure: data.main.pressure,
         temperature: data.main.temp,
-        date: 'date',
+        date: getDate(),
     }
 
     //Itera weatherData y devuelve las key, es decir: location, description, etc...
@@ -23,6 +23,13 @@ const setWeatherData = data => {
         //Settear info en index.html
         document.getElementById(key).textContent = weatherData[key];
     });
+}
+
+const getDate = () => {
+    let date = new Date();
+    //getMonth()+1 -> porque arranca en 0
+    //slice(-2) -> para que si el mes es de dos digitos no agregue el 0 adelante
+    return `${date.getDate()}-${('0' + (date.getMonth()+1)).slice(-2)}-${date.getFullYear()}`;
 }
 
 const onload = () => {
