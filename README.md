@@ -7,6 +7,6 @@ Creación de aplicación para conocer el clima en la ubicación del usuario
 - CSS
 
 ## Source
-https://www.youtube.com/watch?v=yT_wBSQ9EIs
-https://openweathermap.org/
-https://loading.io/css/https://loading.io/css/
+1. https://www.youtube.com/watch?v=yT_wBSQ9EIs
+2. https://openweathermap.org/
+3. https://loading.io/css/https://loading.io/css/
