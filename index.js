@@ -16,6 +16,7 @@ const setWeatherData = data => {
         pressure: data.main.pressure + ' hPa',
         temperature: data.main.temp + ' C°',
         date: getDate(),
+        wind: Math.round(data.wind.speed * 3.6) + ' km/h',
     }
 
     //Itera weatherData y devuelve las key, es decir: location, description, etc...
