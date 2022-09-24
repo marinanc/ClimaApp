@@ -23,6 +23,17 @@ const setWeatherData = data => {
         //Settear info en index.html
         document.getElementById(key).textContent = weatherData[key];
     });
+
+    cleanUp();
+}
+
+//Intercambio entre el loader y el contenido
+const cleanUp = () => {
+    let container = document.getElementById('container');
+    let loader = document.getElementById('loader');
+
+    loader.style.display = 'none';
+    container.style.display = 'flex';
 }
 
 const getDate = () => {
