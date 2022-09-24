@@ -16,6 +16,7 @@ const setWeatherData = data => {
         pressure: data.main.pressure + ' hPa',
         temperature: data.main.temp + ' C°',
         date: getDate(),
+        hour: getHour(),
         wind: Math.round(data.wind.speed * 3.6) + ' km/h',
     }
 
@@ -42,6 +43,11 @@ const getDate = () => {
     //getMonth()+1 -> porque arranca en 0
     //slice(-2) -> para que si el mes es de dos digitos no agregue el 0 adelante
     return `${date.getDate()}-${('0' + (date.getMonth()+1)).slice(-2)}-${date.getFullYear()}`;
+}
+
+const getHour = () => {
+    let hour = new Date();
+    return `${hour.getHours()}:${hour.getMinutes()}`;
 }
 
 const onload = () => {
